@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waiter Dashboard</title>
+</head>
+<body>
+    <h1>Welcome Waiter, {{ user }}</h1>
+    <p>This is your dashboard.</p>
+    <a href="{{ url_for('index') }}">Take Order</a><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

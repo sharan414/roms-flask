@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Take Order</title>
+</head>
+<body>
+    <h1>Take Order - {{ user }}</h1>
+    <form action="{{ url_for('order') }}" method="POST">
+        {% for item, price in menu.items() %}
+            {{ item }} (₹{{ price }}): 
+            <input type="number" name="{{ item }}" value="0" min="0"><br><br>
+        {% endfor %}
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
